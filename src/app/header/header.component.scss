@@ -1,0 +1,47 @@
+.portfolio-container {
+    width: 100%;
+    margin-top: 0px; 
+    right: 0;
+}
+
+mat-card-header {
+    margin-bottom: 10px;
+    text-align: align-center; 
+    height: 100px; /* Increase the height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Optional: Increase font size */
+}
+
+mat-card-content {
+    display: flex;
+    flex-direction: row; /* Arrange items in a row */
+    align-items: center;
+    justify-content: space-evenly; /* Center the content horizontally */
+    width: 100%;
+}
+
+
+.text-content {
+    width: 100%; /* Make the text content fill the width of the card */
+    max-width: 600px; /* Optional: Set a max-width to limit the text content's width */
+    text-align: left; /* Align the text to the left */
+    padding: 10px; /* Optional: Add padding for better spacing */
+}
+
+.text-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.text-content li {
+    margin-bottom: 20px;
+}
+
+.example-button-row {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}

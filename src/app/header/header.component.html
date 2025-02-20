@@ -1,0 +1,29 @@
+<div class="portfolio-container">
+    <div class="col-md-12">
+      <mat-card>
+        <mat-card-header>
+          Welkom, mijn naam is {{ Marijn.voornaam }} {{ Marijn.naam }}<br>
+          beginnend software developer
+        </mat-card-header>
+        <mat-card-content>
+          <img mat-card-image [src]="headerImage" alt="portfoliofoto" width="350px" />
+          <div class="text-content">
+            <ul>
+              <li>{{Marijn.geboortedatum}}</li>
+              <li>{{Marijn.gemeente}}</li>
+              <li>{{Marijn.geslacht}}</li>
+              <li>{{Marijn.land}}</li>
+              <li>{{Marijn.email}}</li> 
+            </ul>
+            <section>
+              <div class="example-button-row">
+                <a mat-flat-button href="../assets/CV_Marijn_Roothooft.pdf" target="_blank">Bekijk mijn CV</a>
+                <a mat-flat-button href="https://www.linkedin.com/in/marijn-roothooft-73772025a/">Bezoek mijn Linkedin</a>
+              </div>
+            </section>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  
