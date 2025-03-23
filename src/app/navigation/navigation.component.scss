@@ -1,0 +1,27 @@
+.spacer {
+  margin-left: 20px;
+}
+
+.logo {
+  font-size: 20px;
+  
+}
+
+.mat-toolbar {
+  padding: 0 16px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white !important;
+  min-height: 80px;
+}
+mat-button {
+  font-size: 16px;
+  text-transform: none; /* Standaard maakt Material de tekst uppercase */
+}
+
+.mat-mdc-button {
+  font-size: 16px;
+  color:white
+}
+.logo{
+  width: 200px;
+}
