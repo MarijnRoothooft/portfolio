@@ -4,6 +4,7 @@
     width: 100%;
     margin-top: 0px; 
     right: 0;
+    
 }
 mat-card-header {
     min-height: 100px;  
@@ -19,6 +20,17 @@ h2 {
     font-size: 24px; /* Pas de grootte aan */
    
 }
+
+.custom-button{
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+  
+  .custom-button:hover {
+    transform: scale(1.05);
+  }
+  
 
 
 

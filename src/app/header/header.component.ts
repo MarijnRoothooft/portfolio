@@ -24,7 +24,7 @@ export class HeaderComponent {
     naam: 'Roothooft',
     geboortedatum: "31/10/1998",
     geslacht: 'Man',
-    gemeente: 'Nijlen',
+    gemeente: 'Lier',
     land: 'België',
     email: 'marijn.roothooft@student.thomasmore.be'
   }
