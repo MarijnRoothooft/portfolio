@@ -1,76 +1,81 @@
 import { Component } from '@angular/core';
 import { IVak } from '../../models/vak';
+import { MatCardModule } from '@angular/material/card';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @Component({
   selector: 'app-projecten',
-  imports: [],
+  imports: [MatCardModule, MatProgressBarModule, MatExpansionModule],
   templateUrl: './projecten.component.html',
   styleUrl: './projecten.component.scss'
 })
 export class ProjectenComponent {
-  public vakken: IVak[] = [{
-    id: 1,
-    name: 'Javascript',
-    description: 'Javascript essentials & Javascript advanced',
-    skills: 'Javascript skills',
-    experience: '50'
-  },
-  {
-    id: 2,
-    name: 'Databasemodeleren & SQL',
-    description: 'Introductie tot datamodeleren & SQL',
-    skills: 'Hoe een database op te zetten & efficiënte queries te schrijven',
-    experience: '50'
-  },
-  {
-    id:3,
-    name: 'HTML & CSS',
-    description: 'Hoe HTML en CSS te gebruiken',
-    skills: 'Hoe HTML en CSS te stylen & responsive design te realiseren',
-    experience: '75'
-  },
-  {
-    id:4,
-    name: 'React',
-    description: 'React basics & React native',
-    skills: 'React skills voor zowel een webapplicatie als een mobiele applicatie',
-    experience: '60'
-  },
-  {
-    id:5,
-    name: 'MVC framework development',
-    description: 'ASP projecten uitwerken volgens het MVC-patroon',
-    skills: 'Hoe een MVC patroon te gebruiken om een ASP project te maken',
-    experience: '90'
-  },
-  {
-    id:6,
-    name: '.NET MAUI development',
-    description: '.NET MAUI projecten uitwerken volgens het MVVM-patroon',
-    skills: 'Hoe een MVVM patroon te gebruiken om een .NET MAUI project te maken',
-    experience: '85'
-  },
-  {
-    id: 7,
-    name: 'Next.js development',
-    description: 'Next.js projecten uitwerken volgens het Server-Side Rendering (SSR) en Client-Side Rendering (CSR) patroon',
-    skills: 'Hoe een SSR en CSR patroon te gebruiken om een Next.js project te maken',
-    experience: '40'
-  },
-  {
-    id: 8,
-    name: 'Angular development',
-    description: 'Angular projecten opzetten & herwerken, dit heb ik geleerd op mijn stage bij Reynaers Aluminum',
-    skills: 'Hoe een schaalbare applicatie te maken in Angular',
-    experience: '65'
-  },
-  {
-    id: 9,
-    name: 'Progress openedge development',
-    description: 'Progress code schrijven & de appbuilder gebruiken om een ui op te stellen hiervoor',
-    skills: 'Hoe een programma gemaakt wordt om zowel de frontend als backend af te handelen',
-    experience: '80'
-
-  }
-]
+  public vakken: IVak[] = [
+    {
+      id: 1,
+      name: 'JavaScript',
+      description: 'Programmeren met JavaScript',
+      skills: 'Ik leerde interactieve functionaliteiten bouwen en logica implementeren in webapplicaties.',
+      experience: '50'
+    },
+    {
+      id: 2,
+      name: 'Databasemodellering & SQL',
+      description: 'Modelleren van databanken en schrijven van efficiënte SQL-queries.',
+      skills: 'Ik weet nu hoe ik relationele databases ontwerp en beheer met performante query’s.',
+      experience: '50'
+    },
+    {
+      id: 3,
+      name: 'HTML & CSS',
+      description: 'Webpagina’s opmaken en stylen volgens moderne webstandaarden.',
+      skills: 'Ik kan responsive webpagina’s bouwen die goed werken op verschillende schermgroottes.',
+      experience: '75'
+    },
+    {
+      id: 4,
+      name: 'React',
+      description: 'Front-end ontwikkeling met React en basiskennis van React Native.',
+      skills: 'Ik ontwikkelde component-based UI’s voor zowel web als mobiele toepassingen.',
+      experience: '60'
+    },
+    {
+      id: 5,
+      name: 'MVC Framework Development',
+      description: 'Toepassingen bouwen volgens het Model-View-Controller patroon in ASP.NET.',
+      skills: 'Ik begrijp hoe ik een duidelijke structuur aanbreng in backendprojecten via MVC.',
+      experience: '90'
+    },
+    {
+      id: 6,
+      name: '.NET MAUI Development',
+      description: 'Cross-platform applicaties bouwen met het MVVM-patroon.',
+      skills: 'Ik bouwde native apps met gescheiden logica en UI dankzij MVVM in .NET MAUI.',
+      experience: '85'
+    },
+    {
+      id: 7,
+      name: 'Next.js Development',
+      description: 'Werken met SSR en CSR binnen het Next.js framework.',
+      skills: 'Ik ontdekte hoe je performante webapps maakt met server- en client rendering.',
+      experience: '40'
+    },
+    {
+      id: 8,
+      name: 'Angular Development',
+      description: 'Modulaire applicaties ontwikkelen in Angular, inclusief stageprojecten.',
+      skills: 'Ik bouwde schaalbare Angular-apps en leerde werken met componentstructuren en services, tijdens mijn stage bij Reynaers',
+      experience: '65'
+    },
+    {
+      id: 9,
+      name: 'Progress OpenEdge Development',
+      description: 'Applicaties bouwen met Progress en AppBuilder.',
+      skills: 'Ik leerde zowel frontend als backend ontwikkelen binnen een legacy-omgeving, in mijn werkomgeving bij Reynaers',
+      experience: '80'
+    }
+  ];
 }
+

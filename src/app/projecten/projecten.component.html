@@ -1,1 +1,59 @@
-<p>projecten works!</p>
+<div class="portfolio-container">
+    <mat-card>
+      <div class="grid grid-cols-3 gap-4">
+        <mat-card-header class="col-span-3 justify-center mt-4 mb-8">
+            <mat-card-title>Mijn Vaardigheden</mat-card-title>
+        </mat-card-header>
+  
+        <mat-card-content class="col-span-3 flex flex-col gap-12">
+          <section>
+            <h2 class="text-2xl mb-4 text-primary">Hard Skills</h2>
+            <div class="grid grid-cols-2 gap-6">
+               @for(vak of vakken; track vak.id)
+               {
+                 <div class="vak">
+                    <mat-expansion-panel class="mb-4" expanded="false">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title>
+                            {{vak.name}} - {{vak.description}}
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <mat-progress-bar  mode="determinate" value="{{ vak.experience }}"></mat-progress-bar>
+                        <p class="mt-2">{{vak.skills}}</p>
+                      </mat-expansion-panel>
+                 </div>
+               }
+            </div>
+          </section>
+  
+          <section>
+            <h2 class="text-2xl mb-4 text-primary mt-10">Soft Skills</h2>
+            <div class="grid grid-cols-2 gap-6">
+                <ul class="list-none space-y-2">
+                  <li class="flex items-center">
+                    <i class="fas fa-lightbulb mr-2 text-primary"></i>
+                    Probleemoplossend denken
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-users mr-2 text-primary"></i>
+                    Teamplayer
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-graduation-cap mr-2 text-primary"></i>
+                    Leergierig
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-comments mr-2 text-primary"></i>
+                    Communicatief sterk
+                  </li>
+                  <li class="flex items-center">
+                    <i class="fas fa-chart-line mr-2 text-primary"></i>
+                    Analytisch vermogen
+                  </li>
+                </ul>
+            </div>  
+          </section>            
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </div>

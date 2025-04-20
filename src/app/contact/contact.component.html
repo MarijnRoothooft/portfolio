@@ -1,1 +1,35 @@
-<p>contact works!</p>
+<div class="contact-container p-6 pt-0 max-w-4xl mx-auto">
+    <mat-card>
+      <mat-card-header class="justify-center mt-4 mb-8">
+        <mat-card-title>Neem contact op</mat-card-title>
+      </mat-card-header>
+  
+      <mat-card-content class="flex flex-col gap-6">
+        <p class="text-gray-700">
+          Heb je vragen of wil je samenwerken? Laat gerust een berichtje achter via het formulier hieronder!
+        </p>
+  
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="grid grid-cols-1 gap-6 mt-5">
+          <mat-form-field appearance="fill">
+            <mat-label>Naam</mat-label>
+            <input matInput placeholder="Jouw naam" formControlName="naam" required>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" placeholder="jij@example.com" formControlName="email" required>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Bericht</mat-label>
+            <textarea matInput rows="5" placeholder="Typ hier je bericht..." formControlName="bericht" required></textarea>
+          </mat-form-field>
+  
+          <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid">
+            Versturen
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
