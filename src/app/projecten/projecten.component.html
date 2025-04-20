@@ -8,19 +8,20 @@
         <mat-card-content class="col-span-3 flex flex-col gap-12">
           <section>
             <h2 class="text-2xl mb-4 text-primary">Hard Skills</h2>
-            <div class="grid grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                @for(vak of vakken; track vak.id)
                {
                  <div class="vak">
-                    <mat-expansion-panel class="mb-4" expanded="false">
-                        <mat-expansion-panel-header>
-                          <mat-panel-title>
+                    <mat-expansion-panel class="mb-sm:mb-2" expanded="false">
+                        <mat-expansion-panel-header class="mt-3 mb-3">
+                          <mat-panel-title class="mt-5 mb-5"> 
                             {{vak.name}} - {{vak.description}}
                           </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <mat-progress-bar  mode="determinate" value="{{ vak.experience }}"></mat-progress-bar>
+                        <mat-progress-bar class="mt-2" mode="determinate" value="{{ vak.experience }}"></mat-progress-bar>
                         <p class="mt-2">{{vak.skills}}</p>
                       </mat-expansion-panel>
+                      
                  </div>
                }
             </div>

@@ -5,24 +5,27 @@
         Welkom, mijn naam is {{ Marijn.voornaam }} {{ Marijn.naam }}<br>
         beginnend software developer
       </mat-card-header>
-      <mat-card-content class="col-span-3 flex items-start gap-6 w-full !flex">
-        <img mat-card-image [src]="headerImage" alt="portfoliofoto" class="w-full max-w-[400px] h-auto flex-shrink-0" />
-        <div class="text-content flex-1 min-w-0">
-          <h2 class="text-2xl  mb-10">Over mij:</h2>
-            <p class="mb-4">
-              Hallo! Mijn naam is Marijn. Ik ben geboren op {{Marijn.geboortedatum}} en woon in {{Marijn.gemeente}}, {{Marijn.land}}. 
-              Als beginnend softwareontwikkelaar ben ik gepassioneerd over technologie, programmeren en het creëren van efficiënte en innovatieve oplossingen.
-            </p>
-            <p class="mb-4">
-              Mijn interesse in softwareontwikkeling begon met een nieuwsgierigheid naar hoe applicaties werken. Inmiddels heb ik ervaring opgedaan in verschillende 
-              programmeertalen en frameworks, en blijf ik mezelf ontwikkelen om nieuwe uitdagingen aan te gaan.
-            </p>
-            <p class="mb-4">
-              Verder ben ik momenteel werkzaam bij Reynaers Aluminum als ICT ERP servicedesk agent.
-            </p>
-            <p class="mb-4">
-              Wil je contact opnemen? Je kunt me bereiken via <a href="mailto:{{Marijn.email}}" class="text-blue-500 underline">{{Marijn.email}}</a>.
-            </p>
+      <mat-card-content class="col-span-3 flex flex-col lg:flex-row gap-6 w-full">
+        <!-- Afbeelding -->
+        <img mat-card-image [src]="headerImage" alt="portfoliofoto" class="max-w-[400px] h-auto flex-shrink-0" />
+        
+        <!-- Tekst -->
+        <div class="text-content flex-1 min-w-0 lg:ml-1">
+          <h2 class="text-2xl mt-2 mb-10">Over mij:</h2>
+          <p class="mb-4">
+            Hallo! Mijn naam is Marijn. Ik ben geboren op {{Marijn.geboortedatum}} en woon in {{Marijn.gemeente}}, {{Marijn.land}}. 
+            Als beginnend softwareontwikkelaar ben ik gepassioneerd over technologie, programmeren en het creëren van efficiënte en innovatieve oplossingen.
+          </p>
+          <p class="mb-4">
+            Mijn interesse in softwareontwikkeling begon met een nieuwsgierigheid naar hoe applicaties werken. Inmiddels heb ik ervaring opgedaan in verschillende 
+            programmeertalen en frameworks, en blijf ik mezelf ontwikkelen om nieuwe uitdagingen aan te gaan.
+          </p>
+          <p class="mb-4">
+            Verder ben ik momenteel werkzaam bij Reynaers Aluminum als ICT ERP servicedesk agent.
+          </p>
+          <p class="mb-4">
+            Wil je contact opnemen? Je kunt me bereiken via <a href="mailto:{{Marijn.email}}" class="text-blue-500 underline">{{Marijn.email}}</a>.
+          </p>
           <section>
             <div class="flex gap-4 mt-5">
               <a class="custom-button" mat-flat-button href="./CV_MarijnRoothooft.pdf" target="_blank">Bekijk mijn CV</a>

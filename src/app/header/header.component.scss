@@ -4,33 +4,59 @@
     width: 100%;
     margin-top: 0px; 
     right: 0;
-    
 }
+
 mat-card-header {
     min-height: 100px;  
     font-size: 24px; 
 }
 
-.text-content{
+.text-content {
     margin-bottom: 20px;
     padding-left: 30px;
     font-size: 18px;
 }
+
 h2 {
     font-size: 24px; /* Pas de grootte aan */
-   
 }
 
-.custom-button{
+.custom-button {
     border-radius: 8px;
     padding: 10px 20px;
     transition: all 0.3s ease-in-out;
 }
-  
-  .custom-button:hover {
+
+.custom-button:hover {
     transform: scale(1.05);
-  }
-  
+}
 
+::ng-deep .mat-mdc-card-content {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+}
 
+::ng-deep .mat-mdc-card-content img {
+    max-width: 400px !important;
+    height: auto !important;
+    flex-shrink: 0 !important;
+}
 
+::ng-deep .mat-mdc-card-content .text-content {
+    flex: 1 !important;
+    min-width: 0 !important;
+    margin-left: 10px !important;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    ::ng-deep .mat-mdc-card-content {
+        flex-direction: column !important;
+    }
+
+    ::ng-deep .mat-mdc-card-content .text-content {
+        margin-left: 0 !important;
+        padding-left: 10px !important;
+    }
+}
