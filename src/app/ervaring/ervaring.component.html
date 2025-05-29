@@ -23,8 +23,8 @@
                             <mat-card-footer>
                                 <p>{{project.framework}}</p>
                             </mat-card-footer>
-                        </mat-card-content>
-                        
+                        </mat-card-content>                        
+                        <a mat-button color="primary" class="mt-4" [href]="project.githubUrl" target="_blank" *ngIf="project.githubUrl">Bekijk project</a>
                         </mat-card>
 
                 }

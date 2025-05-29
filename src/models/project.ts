@@ -4,4 +4,5 @@ export interface IProject {
     skills: string;
     framework: string;
     imageUrl: string;
+    githubUrl?: string;
 }

@@ -24,7 +24,8 @@ export class ErvaringComponent {
       description: 'React Native applicatie voor het beheren van voetbalspelers en statistieken.',
       skills: 'React Native, TypeScript, SQLite , MKKV',
       framework: 'React Native',
-      imageUrl: 'assets/projects/voetbal-app.jpg'
+      imageUrl: 'assets/projects/voetbal-app.jpg',
+      githubUrl: 'https://github.com/it-graduaten/project-mobile-development-MarijnRoothooft'
     },
     {
       name: 'Ziekenfonds reizen app',
