@@ -12,6 +12,49 @@ import {MatExpansionModule} from '@angular/material/expansion';
   styleUrl: './projecten.component.scss'
 })
 export class ProjectenComponent {
+  public softSkills = [
+    {
+      id: 1,
+      name: 'Probleemoplossend denken',
+      description: 'Analytisch benaderen van uitdagingen',
+      skills: 'Ik kan complexe problemen opdelen in kleinere, behapbare onderdelen en systematisch oplossen.',
+      experience: '85',
+      icon: 'fa-lightbulb'
+    },
+    {
+      id: 2,
+      name: 'Teamplayer',
+      description: 'Effectief samenwerken in teams',
+      skills: 'Ik werk graag samen, deel kennis en help anderen om gezamenlijke doelen te bereiken.',
+      experience: '90',
+      icon: 'fa-users'
+    },
+    {
+      id: 3,
+      name: 'Leergierig',
+      description: 'Continue persoonlijke ontwikkeling',
+      skills: 'Ik ben altijd op zoek naar nieuwe kennis en manieren om mezelf te verbeteren.',
+      experience: '95',
+      icon: 'fa-graduation-cap'
+    },
+    {
+      id: 4,
+      name: 'Communicatief sterk',
+      description: 'Heldere communicatie met stakeholders',
+      skills: 'Ik kan technische concepten duidelijk uitleggen aan verschillende doelgroepen.',
+      experience: '85',
+      icon: 'fa-comments'
+    },
+    {
+      id: 5,
+      name: 'Analytisch vermogen',
+      description: 'Gestructureerd analyseren en oplossen',
+      skills: 'Ik kan situaties grondig analyseren en kom met onderbouwde oplossingen.',
+      experience: '90',
+      icon: 'fa-chart-line'
+    }
+  ];
+
   public vakken: IVak[] = [
     {
       id: 1,

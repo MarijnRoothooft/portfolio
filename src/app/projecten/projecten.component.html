@@ -18,42 +18,35 @@
                             {{vak.name}} - {{vak.description}}
                           </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <mat-progress-bar class="mt-2" mode="determinate" value="{{ vak.experience }}"></mat-progress-bar>
+                        <p><strong>Ervaring:</strong></p>
+                        <mat-progress-bar class="mt-2" mode="determinate" aria-label="ervaring:" value="{{ vak.experience }}"></mat-progress-bar>
                         <p class="mt-2">{{vak.skills}}</p>
                       </mat-expansion-panel>
                       
                  </div>
                }
             </div>
-          </section>
-  
-          <section>
+          </section>          <section>
             <h2 class="text-2xl mb-4 text-primary mt-10">Soft Skills</h2>
-            <div class="grid grid-cols-2 gap-6">
-                <ul class="list-none space-y-2">
-                  <li class="flex items-center">
-                    <i class="fas fa-lightbulb mr-2 text-primary"></i>
-                    Probleemoplossend denken
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-users mr-2 text-primary"></i>
-                    Teamplayer
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-graduation-cap mr-2 text-primary"></i>
-                    Leergierig
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-comments mr-2 text-primary"></i>
-                    Communicatief sterk
-                  </li>
-                  <li class="flex items-center">
-                    <i class="fas fa-chart-line mr-2 text-primary"></i>
-                    Analytisch vermogen
-                  </li>
-                </ul>
-            </div>  
-          </section>            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+               @for(skill of softSkills; track skill.id)
+               {
+                 <div class="vak">
+                    <mat-expansion-panel class="mb-sm:mb-2" expanded="false">
+                        <mat-expansion-panel-header class="mt-3 mb-3">
+                          <mat-panel-title class="mt-5 mb-5">
+                            <i class="fas {{skill.icon}} mr-2 text-primary"></i>
+                            {{skill.name}} - {{skill.description}}
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p><strong>Niveau:</strong></p>
+                        <mat-progress-bar class="mt-2" mode="determinate" aria-label="niveau:" value="{{skill.experience}}"></mat-progress-bar>
+                        <p class="mt-2">{{skill.skills}}</p>
+                    </mat-expansion-panel>
+                 </div>
+               }
+            </div>
+          </section>
         </mat-card-content>
       </div>
     </mat-card>
