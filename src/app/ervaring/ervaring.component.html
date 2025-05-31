@@ -1,38 +1,47 @@
- <div class="projecten-container">
-         <mat-card>
-        <div class="grid grid-cols-3 gap-4">
-        <mat-card-header class="col-span-3 justify-center mt-4 mb-8">
-            <mat-card-title>Mijn projecten</mat-card-title>
-        </mat-card-header>
-  
-        <mat-card-content class="col-span-3 flex flex-col gap-12">
-          <section>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                @for(project of projects; track project) {
-                    <mat-card class="project-card" appearance="outlined">
-                        <mat-card-header>
-                            <div mat-card-avatar class="example-header-image"></div>
-                            <mat-card-title class="mb-4">{{project.name}}</mat-card-title>
-                            <mat-card-subtitle class="mt-4">{{project.skills}}</mat-card-subtitle>
-                        </mat-card-header>
-                        <img mat-card-image src="{{project.imageUrl}}" alt="{{project.name}}">
-                        <mat-card-content>
-                            <p>
-                                {{project.description}}
-                            </p>
-                            <mat-card-footer>
-                                <p>{{project.framework}}</p>
-                            </mat-card-footer>
-                        </mat-card-content>                        
-                        <a mat-button color="primary" class="mt-4" [href]="project.githubUrl" target="_blank" *ngIf="project.githubUrl">Bekijk project</a>
-                        </mat-card>
+<div class="projecten-container">
+  <mat-card>
+    <div class="grid grid-cols-3 gap-4">
+      <mat-card-header class="col-span-3 justify-center mt-4 mb-8">
+        <mat-card-title>Mijn projecten</mat-card-title>
+      </mat-card-header>
 
-                }
-             
-            </div>
-            </section>
-        </mat-card-content>
-      </div>
-    </mat-card>
+      <mat-card-content class="col-span-3 flex flex-col gap-12">
+        <section>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            @for (project of projects; track project) {
+              <mat-card class="project-card" appearance="outlined">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title class="mb-4 mt-4">{{ project.name }}</mat-card-title>
+                  <mat-card-subtitle class="mt-4">{{ project.skills }}</mat-card-subtitle>
+                </mat-card-header>
+
+                <div class="image-wrapper">
+                    <img mat-card-image [src]="project.imageUrl" [alt]="project.name" />
+                </div>
+
+                <mat-card-content class="mt-4 mb-4">
+                  <p class="mb-4">{{ project.description }}</p>
+                  <mat-card-footer class="mt-8">
+                    <p><strong>Framework: </strong>{{ project.framework }}</p>
+                  </mat-card-footer>
+                </mat-card-content>
+
+                <a
+                  mat-button
+                  color="primary"
+                  class="mt-4"
+                  [href]="project.githubUrl"
+                  target="_blank"
+                  *ngIf="project.githubUrl"
+                >
+                  Bekijk project
+                </a>
+              </mat-card>
+            }
+          </div>
+        </section>
+      </mat-card-content>
     </div>
-
+  </mat-card>
+</div>
